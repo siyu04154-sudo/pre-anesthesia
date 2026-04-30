@@ -1,501 +1,605 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>麻醉前準備與禁食｜衛生福利部彰化醫院麻醉科</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --blue-50:#E6F1FB;--blue-100:#B5D4F4;--blue-200:#85B7EB;
-  --blue-600:#185FA5;--blue-800:#0C447C;
-  --green-50:#EAF3DE;--green-100:#C0DD97;
-  --green-600:#3B6D11;--green-800:#27500A;
-  --amber-50:#FAEEDA;--amber-100:#FAC775;
-  --amber-600:#854F0B;--amber-800:#633806;
-  --red-50:#FCEBEB;--red-600:#A32D2D;--red-800:#791F1F;
-  --teal-50:#E1F5EE;--teal-600:#0F6E56;--teal-800:#085041;
-  --gray-50:#F7F6F2;--gray-100:#EDECE8;--gray-200:#D3D1C7;
-  --gray-600:#5F5E5A;--gray-800:#2C2C2A;
-  --text-primary:#1a1a18;--text-secondary:#5F5E5A;--text-hint:#888780;
-  --border:rgba(0,0,0,0.09);--border-md:rgba(0,0,0,0.16);
-  --r-sm:6px;--r-md:10px;--r-lg:14px;--r-xl:18px;
-}
-html{scroll-behavior:smooth}
-body{font-family:'Noto Sans TC',sans-serif;background:#F2F0E9;color:var(--text-primary);min-height:100vh;line-height:1.6}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>麻醉術前指引｜彰化醫院</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* Header */
-.site-header{background:#fff;border-bottom:1px solid var(--border);padding:12px 20px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:100}
-.header-info{flex:1}
-.header-title{font-size:15px;font-weight:700;color:var(--text-primary)}
-.header-sub{font-size:11px;color:var(--text-secondary)}
-.hospital-badge{font-size:11px;color:var(--blue-800);background:var(--blue-50);border:1px solid var(--blue-100);border-radius:99px;padding:3px 10px;font-weight:500;white-space:nowrap}
+    body {
+      font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+      background: #f0f4f8;
+      color: #2c3e50;
+      font-size: 15px;
+      line-height: 1.6;
+    }
 
+    /* ── 頁首 ── */
+    header {
+      background: linear-gradient(135deg, #1565c0, #1e88e5);
+      color: white;
+      padding: 30px 20px 26px;
+      text-align: center;
+    }
+    header .hospital { font-size: 12px; letter-spacing: 3px; opacity: 0.8; margin-bottom: 8px; }
+    header h1 { font-size: 24px; font-weight: 700; letter-spacing: 1px; }
+    header .badge {
+      display: inline-block;
+      margin-top: 12px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 6px 16px;
+      font-size: 12px;
+    }
 
-/* Container */
-.container{max-width:680px;margin:0 auto;padding:24px 16px 64px}
+    /* ── 進度導覽 ── */
+    .nav-steps {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      padding: 14px 16px;
+      background: white;
+      overflow-x: auto;
+      border-bottom: 1px solid #e8edf2;
+    }
+    .nav-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      min-width: 56px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .nav-step .dot {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+    }
+    .nav-step span { font-size: 10px; color: #666; text-align: center; line-height: 1.3; }
+    .step-assess .dot { background: #e8f5e9; }
+    .step-drug   .dot { background: #f3e5f5; }
+    .step-fast   .dot { background: #fff3e0; }
+    .step-alert  .dot { background: #fce4ec; }
+    .step-other  .dot { background: #e3f2fd; }
 
-/* Hero */
-.hero{background:#fff;border-radius:var(--r-xl);border:1px solid var(--border);padding:22px 22px 20px;margin-bottom:20px}
-.hero-top{display:flex;align-items:flex-start;gap:16px;margin-bottom:14px}
-.hero-icon{width:52px;height:52px;border-radius:var(--r-lg);background:var(--blue-50);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.hero-icon svg{width:28px;height:28px}
-.hero-title{font-size:20px;font-weight:700;color:var(--text-primary);margin-bottom:4px}
-.hero-desc{font-size:13px;color:var(--text-secondary);line-height:1.7}
-.hero-tags{display:flex;flex-wrap:wrap;gap:6px}
-.hero-tag{font-size:11px;padding:3px 10px;border-radius:99px;font-weight:500}
-.tag-blue{background:var(--blue-50);color:var(--blue-800);border:1px solid var(--blue-100)}
-.tag-green{background:var(--green-50);color:var(--green-800);border:1px solid var(--green-100)}
-.tag-amber{background:var(--amber-50);color:var(--amber-800);border:1px solid var(--amber-100)}
+    /* ── 主體 ── */
+    main { padding: 14px; max-width: 640px; margin: 0 auto; }
 
-/* Progress */
-.progress-wrap{background:#fff;border-radius:var(--r-lg);border:1px solid var(--border);padding:16px 20px;margin-bottom:20px}
-.progress-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
-.progress-label{font-size:13px;color:var(--text-secondary)}
-.progress-count{font-size:22px;font-weight:700;color:var(--text-primary)}
-.progress-count span{font-size:13px;font-weight:400;color:var(--text-hint);margin-left:2px}
-.progress-track{height:8px;background:var(--gray-100);border-radius:99px;overflow:hidden}
-.progress-fill{height:8px;border-radius:99px;background:var(--blue-600);width:0%;transition:width .4s cubic-bezier(.4,0,.2,1)}
-.progress-fill.done{background:var(--green-600)}
+    /* ── 卡片 ── */
+    .card {
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px 18px;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    .card-header .ico { font-size: 22px; }
+    .card-body { padding: 16px; }
 
-/* Section block */
-.edu-section{background:#fff;border-radius:var(--r-xl);border:1px solid var(--border);margin-bottom:16px;overflow:hidden}
-.edu-section-header{display:flex;align-items:center;gap:14px;padding:18px 20px 0}
-.section-icon{width:44px;height:44px;border-radius:var(--r-md);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.section-title{font-size:16px;font-weight:700;color:var(--text-primary)}
-.section-subtitle{font-size:12px;color:var(--text-secondary);margin-top:2px}
-.edu-desc{margin:10px 20px 14px;padding:12px 14px;border-radius:var(--r-md);font-size:13px;line-height:1.75;color:var(--text-secondary);border-left:3px solid;background:var(--gray-50)}
-.edu-desc.blue{border-color:var(--blue-200);background:var(--blue-50);color:var(--blue-800)}
-.edu-desc.green{border-color:var(--green-100);background:var(--green-50);color:var(--green-800)}
-.edu-desc.amber{border-color:var(--amber-100);background:var(--amber-50);color:var(--amber-800)}
-.edu-desc.teal{border-color:#5DCAA5;background:var(--teal-50);color:var(--teal-800)}
-.edu-desc.red{border-color:#F09595;background:var(--red-50);color:var(--red-800)}
-.checklist-wrap{padding:0 14px 14px}
+    .hd-green  { background: linear-gradient(90deg,#2e7d32,#43a047); }
+    .hd-purple { background: linear-gradient(90deg,#6a1b9a,#8e24aa); }
+    .hd-orange { background: linear-gradient(90deg,#e65100,#fb8c00); }
+    .hd-red    { background: linear-gradient(90deg,#b71c1c,#e53935); }
+    .hd-blue   { background: linear-gradient(90deg,#0d47a1,#1e88e5); }
 
-/* Checklist items */
-.item{display:flex;align-items:flex-start;gap:12px;padding:11px 12px;border-radius:var(--r-md);border:1px solid var(--border);background:#fff;margin-bottom:6px;cursor:pointer;transition:background .15s,border-color .15s;user-select:none;-webkit-tap-highlight-color:transparent}
-.item:last-child{margin-bottom:0}
-.item:hover{background:var(--gray-50)}
-.item.checked{background:var(--green-50);border-color:rgba(59,109,17,.25)}
-.item.warn-item{background:var(--amber-50);border-color:rgba(133,79,11,.18)}
-.item.warn-item.checked{border-color:rgba(133,79,11,.35)}
-.checkbox{width:20px;height:20px;border-radius:5px;border:1.5px solid var(--gray-200);flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;background:#fff;transition:background .15s,border-color .15s}
-.item.checked .checkbox{background:var(--green-600);border-color:var(--green-600)}
-.item.warn-item .checkbox{border-color:var(--amber-600)}
-.item.warn-item.checked .checkbox{background:var(--amber-600);border-color:var(--amber-600)}
-.checkbox svg{width:11px;height:11px;stroke:#fff;fill:none;stroke-width:2.5;opacity:0;transition:opacity .15s}
-.item.checked .checkbox svg{opacity:1}
-.item-body{flex:1}
-.item-text{font-size:14px;font-weight:500;color:var(--text-primary);line-height:1.5}
-.item.checked .item-text{color:var(--green-800)}
-.item.warn-item .item-text{color:var(--amber-800)}
-.item-note{font-size:12px;color:var(--text-hint);margin-top:3px;line-height:1.45}
-.item.checked .item-note{color:var(--green-600)}
-.item.warn-item .item-note{color:var(--amber-600)}
-.warn-badge{font-size:11px;padding:3px 9px;border-radius:99px;background:var(--amber-50);color:var(--amber-600);border:1px solid rgba(133,79,11,.2);white-space:nowrap;flex-shrink:0;margin-top:2px;font-weight:500}
-.glp1-expand{display:none;margin-top:8px;padding:10px 12px;border-radius:var(--r-md);background:var(--amber-50);border:1px solid rgba(133,79,11,.2);font-size:12px;color:var(--amber-800);line-height:1.65}
-.glp1-expand.show{display:block}
+    /* ── 攜帶物品格 ── */
+    .bring-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+    .bring-item {
+      background: #f1f8e9;
+      border-radius: 12px;
+      padding: 12px 10px;
+      text-align: center;
+    }
+    .bring-item .b-ico { font-size: 26px; margin-bottom: 4px; }
+    .bring-item .b-title { font-size: 13px; font-weight: 700; color: #2e7d32; }
+    .bring-item .b-sub { font-size: 11px; color: #666; margin-top: 2px; }
 
-/* Fasting table */
-.fast-card{border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;margin:0 14px 10px}
-.fast-table{width:100%;border-collapse:collapse;font-size:13px;table-layout:fixed}
-.fast-table th{text-align:left;padding:8px 12px;background:var(--gray-50);color:var(--text-secondary);font-weight:500;font-size:11px;letter-spacing:.04em;border-bottom:1px solid var(--border)}
-.fast-table td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--text-primary);vertical-align:middle;line-height:1.4}
-.fast-table tr:last-child td{border-bottom:none}
-.fast-table td:first-child{font-weight:500;width:36%}
-.fast-table td:nth-child(2){color:var(--text-hint);font-size:12px;width:36%}
-.fast-table td:last-child{width:28%;text-align:right}
-.time-pill{display:inline-block;font-size:11px;padding:3px 9px;border-radius:99px;font-weight:700}
-.t2{background:var(--green-50);color:var(--green-600);border:1px solid rgba(59,109,17,.2)}
-.t6{background:var(--blue-50);color:var(--blue-600);border:1px solid rgba(24,95,165,.2)}
-.t8{background:var(--amber-50);color:var(--amber-600);border:1px solid rgba(133,79,11,.2)}
+    /* ── 檢查項目 ── */
+    .check-list { list-style: none; }
+    .check-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 14px;
+    }
+    .check-list li:last-child { border-bottom: none; }
+    .check-list .c-ico {
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      background: #e8f5e9;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 17px; flex-shrink: 0;
+    }
+    .check-list .c-text strong { display: block; font-size: 13px; }
+    .check-list .c-text small { color: #888; font-size: 11px; }
 
-/* Example box */
-.example-box{margin:0 14px 14px;padding:12px 14px;border-radius:var(--r-md);background:var(--blue-50);border:1px solid rgba(24,95,165,.15);font-size:13px;color:var(--blue-800);line-height:1.7}
-.example-box strong{font-weight:700}
-.example-rows{margin-top:8px;display:flex;flex-direction:column;gap:5px}
-.ex-row{display:flex;align-items:center;gap:8px;font-size:13px}
-.ex-time{font-weight:700;min-width:64px;color:var(--blue-800)}
-.ex-action{color:var(--blue-600)}
+    /* ── 藥物分類 ── */
+    .drug-group { margin-bottom: 16px; }
+    .drug-group:last-child { margin-bottom: 0; }
+    .drug-badge {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .badge-ok   { background: #e8f5e9; color: #2e7d32; }
+    .badge-stop { background: #ffebee; color: #c62828; }
+    .badge-ask  { background: #fff8e1; color: #f57f17; }
 
-/* Alert box */
-.alert-box{margin:0 14px 14px;padding:12px 14px;border-radius:var(--r-md);font-size:13px;line-height:1.7}
-.alert-red{background:var(--red-50);color:var(--red-800);border:1px solid rgba(163,45,45,.18)}
-.alert-box strong{font-weight:700;display:block;margin-bottom:3px}
+    .drug-table { width: 100%; border-collapse: collapse; }
+    .drug-table th {
+      font-size: 11px;
+      color: #888;
+      padding: 6px 8px;
+      border-bottom: 2px solid #f0f0f0;
+      text-align: left;
+      font-weight: 600;
+    }
+    .drug-table td {
+      padding: 9px 8px;
+      border-bottom: 1px solid #f8f8f8;
+      font-size: 13px;
+      vertical-align: middle;
+    }
+    .drug-table tr:last-child td { border-bottom: none; }
+    .drug-table .purpose { font-weight: 600; color: #333; }
+    .drug-table .names { color: #555; font-size: 12px; margin-top: 2px; }
+    .drug-table .days { font-size: 11px; color: #e53935; font-weight: 600; white-space: nowrap; }
 
-/* Finish */
-.finish-area{margin-top:24px}
-.finish-btn{width:100%;padding:14px;border-radius:var(--r-lg);border:1px solid var(--border-md);background:#fff;color:var(--text-primary);font-size:14px;font-weight:500;font-family:'Noto Sans TC',sans-serif;cursor:pointer;transition:background .15s;display:flex;align-items:center;justify-content:center;gap:8px}
-.finish-btn:hover{background:var(--gray-50)}
-.finish-btn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2}
-.finish-msg{display:none;margin-top:14px;padding:20px;border-radius:var(--r-lg);background:var(--green-50);border:1px solid rgba(59,109,17,.25);text-align:center}
-.finish-msg.show{display:block}
-.finish-msg-title{font-size:17px;font-weight:700;color:var(--green-800);margin-bottom:6px}
-.finish-msg-sub{font-size:13px;color:var(--green-600);line-height:1.7}
+    .drug-note {
+      background: #fff8e1;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 12px;
+      color: #6d4c41;
+      margin-top: 12px;
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+    }
 
-/* Footer */
-.site-footer{text-align:center;padding:20px 16px;font-size:11px;color:var(--text-hint);border-top:1px solid var(--border);margin-top:12px;line-height:1.8}
+    /* ── 禁食 Timeline ── */
+    .fast-timeline { position: relative; padding-left: 20px; }
+    .fast-timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px; top: 0; bottom: 0;
+      width: 2px;
+      background: linear-gradient(#fb8c00, #ffe082);
+    }
+    .fast-item {
+      position: relative;
+      margin-bottom: 14px;
+      padding-left: 16px;
+    }
+    .fast-item::before {
+      content: '';
+      position: absolute;
+      left: -15px;
+      top: 8px;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: #fb8c00;
+      border: 2px solid white;
+      box-shadow: 0 0 0 2px #fb8c00;
+    }
+    .fast-item:last-child { margin-bottom: 0; }
+    .fast-item .f-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+    .fast-item .f-title { font-size: 14px; font-weight: 700; }
+    .fast-item .f-hours {
+      background: #fb8c00;
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 20px;
+    }
+    .fast-item .f-examples { font-size: 12px; color: #888; }
 
-/* Mobile */
-@media(max-width:520px){
-  .fast-table td:nth-child(2),.fast-table th:nth-child(2){display:none}
-  .fast-table td:first-child{width:55%}
-  .fast-table td:last-child{width:45%}
-  .hero-top{flex-direction:column;gap:10px}
-}
-</style>
+    /* ── 特殊狀況 格 ── */
+    .alert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .alert-item {
+      background: #fff5f5;
+      border: 1px solid #ffcdd2;
+      border-radius: 12px;
+      padding: 12px 10px;
+      text-align: center;
+    }
+    .alert-item .a-ico { font-size: 26px; margin-bottom: 4px; }
+    .alert-item .a-title { font-size: 13px; font-weight: 700; color: #c62828; }
+    .alert-item .a-sub { font-size: 11px; color: #888; margin-top: 3px; line-height: 1.4; }
+
+    /* ── 其他注意 ── */
+    .other-list { list-style: none; }
+    .other-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 14px;
+    }
+    .other-list li:last-child { border-bottom: none; }
+    .other-list .o-ico {
+      width: 38px; height: 38px;
+      border-radius: 50%;
+      background: #e3f2fd;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 19px; flex-shrink: 0;
+    }
+    .other-list .o-text strong { display: block; font-size: 13px; margin-bottom: 2px; }
+    .other-list .o-text span { color: #666; font-size: 12px; }
+
+    /* ── 重要提醒 ── */
+    .alert-box {
+      background: #fff3e0;
+      border-left: 4px solid #fb8c00;
+      border-radius: 0 10px 10px 0;
+      padding: 10px 14px;
+      font-size: 13px;
+      color: #6d4c41;
+      margin-top: 12px;
+    }
+
+    /* ── 頁尾 ── */
+    footer {
+      text-align: center;
+      padding: 20px 16px 36px;
+      font-size: 11px;
+      color: #aaa;
+      line-height: 1.8;
+    }
+  </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-info">
-    <div class="header-title">麻醉前準備與禁食</div>
-    <div class="header-sub">衛生福利部彰化醫院 麻醉科</div>
-  </div>
-  <span class="hospital-badge">術前衛教</span>
+<header>
+  <div class="hospital">彰化醫院 · 麻醉科</div>
+  <h1>📋 麻醉術前指引</h1>
+  <div class="badge">⚠️ 手術前請仔細閱讀，如有疑問請聯繫護理站</div>
 </header>
 
-<div class="container">
-
-  <!-- Hero -->
-  <div class="hero">
-    <div class="hero-top">
-      <div class="hero-icon">
-        <!-- 手術清單圖示 -->
-        <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x="10" y="6" width="32" height="40" rx="4" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.5"/>
-          <rect x="18" y="2" width="16" height="8" rx="3" fill="#fff" stroke="#185FA5" stroke-width="1.5"/>
-          <line x1="17" y1="20" x2="35" y2="20" stroke="#185FA5" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="17" y1="27" x2="35" y2="27" stroke="#185FA5" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="17" y1="34" x2="28" y2="34" stroke="#185FA5" stroke-width="1.5" stroke-linecap="round"/>
-          <circle cx="13" cy="20" r="2" fill="#185FA5"/>
-          <circle cx="13" cy="27" r="2" fill="#185FA5"/>
-          <circle cx="13" cy="34" r="2" fill="#185FA5"/>
-        </svg>
-      </div>
-      <div>
-        <div class="hero-title">手術前確認清單</div>
-        <div class="hero-desc">這份清單幫助您在手術前完成所有必要準備。請從上到下逐項閱讀說明並勾選確認，完成後可截圖或列印帶往醫院。若有任何疑問，請直接詢問麻醉科或護理人員。</div>
-      </div>
-    </div>
-    <div class="hero-tags">
-      <span class="hero-tag tag-blue">手術前一天閱讀</span>
-      <span class="hero-tag tag-green">手術當天早上確認</span>
-      <span class="hero-tag tag-amber">有疑問請告知醫護</span>
-    </div>
-  </div>
-
-  <!-- Progress -->
-  <div class="progress-wrap">
-    <div class="progress-top">
-      <div class="progress-label">確認進度</div>
-      <div class="progress-count"><span id="prog-num">0</span><span> / 13 項已完成</span></div>
-    </div>
-    <div class="progress-track">
-      <div class="progress-fill" id="prog-fill"></div>
-    </div>
-  </div>
-
-  <!-- ── Section 1: 個人準備 ── -->
-  <div class="edu-section">
-    <div class="edu-section-header">
-      <div class="section-icon" style="background:#E6F1FB">
-        <!-- 人物/個人準備圖示 -->
-        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-          <circle cx="22" cy="14" r="7" fill="#B5D4F4" stroke="#185FA5" stroke-width="1.5"/>
-          <path d="M8 36c0-7.732 6.268-14 14-14s14 6.268 14 14" stroke="#185FA5" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-          <line x1="28" y1="10" x2="34" y2="6" stroke="#185FA5" stroke-width="1.2" stroke-linecap="round"/>
-          <circle cx="35" cy="5" r="2.5" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.2"/>
-          <line x1="16" y1="10" x2="10" y2="6" stroke="#185FA5" stroke-width="1.2" stroke-linecap="round"/>
-          <circle cx="9" cy="5" r="2.5" fill="#E6F1FB" stroke="#185FA5" stroke-width="1.2"/>
-        </svg>
-      </div>
-      <div>
-        <div class="section-title">個人準備</div>
-        <div class="section-subtitle">手術當天的基本準備事項</div>
-      </div>
-    </div>
-    <div class="edu-desc blue">
-      手術前需要移除金屬飾品與假牙，是因為電刀、電氣設備可能造成燒傷，假牙在插管時也有脫落風險。不化妝與不塗指甲油，是讓醫護人員能即時從膚色與指甲顏色判斷您的血液循環狀態。請攜帶藥袋、過敏史等資料，幫助麻醉醫師在術前做出最適合您的麻醉計畫。
-    </div>
-    <div class="checklist-wrap">
-      <div class="item" onclick="toggle(this)">
-        <div class="checkbox"><svg viewBox="0 0 12 9"><polyline points="1,4.5 4.5,8 11,1"/></svg></div>
-        <div class="item-body"><div class="item-text">取下所有飾品（戒指、項鍊、耳環、手環）</div></div>
-      </div>
-      <div class="item" onclick="toggle(this)">
-        <div class="checkbox"><svg viewBox="0 0 12 9"><polyline points="1,4.5 4.5,8 11,1"/></svg></div>
-        <div class="item-body"><div class="item-text">取下假牙、活動牙套、隱形眼鏡</div><div class="item-note">插管時假牙可能脫落，隱形眼鏡長時間手術易造成角膜損傷</div></div>
-      </div>
-      <div class="item" onclick="toggle(this)">
-        <div class="checkbox"><svg viewBox="0 0 12 9"><polyline points="1,4.5 4.5,8 11,1"/></svg></div>
-        <div class="item-body"><div class="item-text">不化妝、不塗指甲油</div><div class="item-note">指甲顏色是判斷血氧狀況的重要依據，妝容也會影響膚色判讀</div></div>
-      </div>
-      <div class="item" onclick="toggle(this)">
-        <div class="checkbox"><svg viewBox="0 0 12 9"><polyline points="1,4.5 4.5,8 11,1"/></svg></div>
-        <div class="item-body"><div class="item-text">攜帶身份證件與必要就醫資料</div></div>
-      </div>
-      <div class="item" onclick="toggle(this)">
-        <div class="checkbox"><svg viewBox="0 0 12 9"><polyline points="1,4.5 4.5,8 11,1"/></svg></div>
-        <div class="item-body"><div class="item-text">已告知：手術史、慢性病、過敏史、家族病史</div><div class="item-note">包含任何麻醉相關的特殊反應或家族遺傳病史，都請主動說明</div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── Section 2: 禁菸酒檳榔 ── -->
-  <div class="edu-section">
-    <div class="edu-section-header">
-      <div class="section-icon" style="background:#EAF3DE">
-        <!-- 禁止圖示 -->
-        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-          <circle cx="22" cy="22" r="14" fill="#C0DD97" stroke="#3B6D11" stroke-width="1.5"/>
-          <line x1="12" y1="12" x2="32" y2="32" stroke="#3B6D11" stroke-width="2.5" stroke-linecap="round"/>
-          <!-- 菸 -->
-          <rect x="15" y="20" width="14" height="4" rx="2" fill="#fff" stroke="#3B6D11" stroke-width="1.2"/>
-          <path d="M27 18 Q29 17 28 15" stroke="#3B6D11" stroke-width="1.2" stroke-linecap="round" fill="none"/>
-          <path d="M30 19 Q32 17 31 14" stroke="#3B6D11" stroke-width="1.2" stroke-linecap="round" fill="none"/>
-        </svg>
-      </div>
-      <div>
-        <div class="section-title">禁菸・禁酒・禁檳榔</div>
-        <div class="section-subtitle">手術前請停止使用，降低麻醉風險</div>
-      </div>
-    </div>
-    <div class="edu-desc green">
-      抽菸會讓氣道分泌物增加，手術中更容易發生痰液堵塞與肺部併發症；酒精則會影響麻醉藥物代謝，讓麻醉深度難以控制；檳榔長期咀嚼可能造成口腔纖維化與張口困難，使氣管插管更危險。建議盡早停止，至少在手術前 24 小時完全避免。
-    </div>
-    <div class="checklist-wrap">
-      <div class="item" onclick="toggle(this)">
-        <div class="checkbox"><svg viewBox="0 0 12 9"><polyline points="1,4.5 4.5,8 11,1"/></svg></div>
-        <div class="item-body"><div class="item-text">手術前至少 24 小時未抽菸（含電子菸）</div><div class="item-note">建議術前 4 週以上戒菸，可顯著降低術後肺部與傷口併發症</div></div>
-      </div>
-      <div class="item" onclick="toggle(this)">
-        <div class="checkbox"><svg viewBox="0 0 12 9"><polyline points="1,4.5 4.5,8 11,1"/></svg></div>
-        <div class="item-body"><div class="item-text">手術前至少 24 小時未飲酒</div><div class="item-note">若有長期大量飲酒習慣，請勿自行突然停酒（有戒斷風險），請告知醫護協助評估</div></div>
-      </div>
-      <div class="item" onclick="toggle(this)">
-        <div class="checkbox"><svg viewBox="0 0 12 9"><polyline points="1,4.5 4.5,8 11,1"/></svg></div>
-        <div class="item-body"><div class="item-text">禁食開始後未嚼檳榔或口含任何物品</div><div class="item-note">有嚼檳榔習慣者請主動告知麻醉醫師，以便事先評估插管難度</div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── Section 3: 禁食禁水 ── -->
-  <div class="edu-section">
-    <div class="edu-section-header">
-      <div class="section-icon" style="background:#FAEEDA">
-        <!-- 時鐘+食物圖示 -->
-        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-          <circle cx="22" cy="22" r="13" fill="#FAC775" stroke="#854F0B" stroke-width="1.5"/>
-          <line x1="22" y1="13" x2="22" y2="22" stroke="#854F0B" stroke-width="2" stroke-linecap="round"/>
-          <line x1="22" y1="22" x2="28" y2="25" stroke="#854F0B" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="22" cy="22" r="2" fill="#854F0B"/>
-          <!-- 叉叉 -->
-          <line x1="14" y1="31" x2="18" y2="35" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="18" y1="31" x2="14" y2="35" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div>
-        <div class="section-title">禁食禁水時間表</div>
-        <div class="section-subtitle">依食物種類，停止進食的時間不同</div>
-      </div>
-    </div>
-    <div class="edu-desc amber">
-      全身麻醉會讓您「睡著」，同時身體的保護性反射也會暫時停止。若胃裡還有食物或飲料，可能在手術中逆流進入肺部，造成嚴重的吸入性肺炎，甚至危及生命。因此，嚴格遵守禁食時間是麻醉安全最重要的一步，請務必確實執行。
-    </div>
-    <div class="fast-card">
-      <table class="fast-table">
-        <thead>
-          <tr>
-            <th>攝取內容</th>
-            <th>常見例子</th>
-            <th style="text-align:right">最短禁食時間</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>清流質（透明無渣）</td>
-            <td>白開水、清茶、無渣果汁</td>
-            <td><span class="time-pill t2">術前 2 小時</span></td>
-          </tr>
-          <tr>
-            <td>奶類 / 豆漿</td>
-            <td>牛奶、豆漿、優酪乳、奶茶</td>
-            <td><span class="time-pill t6">術前 6 小時</span></td>
-          </tr>
-          <tr>
-            <td>輕食（易消化）</td>
-            <td>稀飯、白吐司、饅頭</td>
-            <td><span class="time-pill t6">術前 6 小時</span></td>
-          </tr>
-          <tr>
-            <td>一般固體食物</td>
-            <td>便當、飯麵、肉類、蛋</td>
-            <td><span class="time-pill t8">術前 8 小時</span></td>
-          </tr>
-          <tr>
-            <td>油炸 / 高脂食物</td>
-            <td>炸雞、披薩、火鍋烤肉</td>
-            <td><span class="time-pill t8">8 小時以上</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="example-box">
-      <strong>範例：若手術時間為早上 8:00</strong>
-      <div class="example-rows">
-        <div class="ex-row">
-          <span class="ex-time">凌晨 0:00</span>
-          <span class="ex-action">停止進食任何固體食物與奶類</span>
-        </div>
-        <div class="ex-row">
-          <span class="ex-time">早上 6:00</span>
-          <span class="ex-action">可少量喝白開水（清流質）</span>
-        </div>
-        <div class="ex-row">
-          <span class="ex-time">早上 6:00 後</span>
-          <span class="ex-action">完全禁食禁水，什麼都不能吃喝</span>
-        </div>
-      </div>
-    </div>
-    <div class="checklist-wrap">
-      <div class="item" onclick="toggle(this)">
-        <div class="checkbox"><svg viewBox="0 0 12 9"><polyline points="1,4.5 4.5,8 11,1"/></svg></div>
-        <div class="item-body"><div class="item-text">已依規定時間完成禁食禁水</div><div class="item-note">若不確定現在能不能吃喝，請先不要，並詢問醫護人員確認</div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── Section 4: 特殊狀況 ── -->
-  <div class="edu-section">
-    <div class="edu-section-header">
-      <div class="section-icon" style="background:#FAEEDA">
-        <!-- 藥袋/針劑圖示 -->
-        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-          <rect x="12" y="16" width="20" height="22" rx="3" fill="#FAC775" stroke="#854F0B" stroke-width="1.5"/>
-          <path d="M17 16v-3a5 5 0 0110 0v3" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round" fill="none"/>
-          <line x1="22" y1="22" x2="22" y2="32" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round"/>
-          <line x1="17" y1="27" x2="27" y2="27" stroke="#854F0B" stroke-width="1.5" stroke-linecap="round"/>
-        </svg>
-      </div>
-      <div>
-        <div class="section-title">藥物與特殊用藥告知</div>
-        <div class="section-subtitle">請攜帶藥袋，主動告知所有用藥</div>
-      </div>
-    </div>
-    <div class="edu-desc amber">
-      某些藥物會影響麻醉安全，例如血液稀釋藥可能增加出血風險、糖尿病藥需調整劑量避免低血糖、保健食品與中草藥也可能影響凝血或與麻醉藥產生交互作用。請攜帶所有藥袋或藥單，包含保健食品，交由醫護人員評估是否需要調整。
-    </div>
-    <div class="checklist-wrap">
-      <div class="item warn-item" id="glp1-item" onclick="toggleGlp1()">
-        <div class="checkbox"><svg viewBox="0 0 12 9"><polyline points="1,4.5 4.5,8 11,1"/></svg></div>
-        <div class="item-body">
-          <div class="item-text">有使用「瘦瘦針 / 減重針（GLP-1 類藥物）」</div>
-          <div class="item-note">如 Ozempic、Wegovy、Saxenda、Mounjaro 等，請點選後閱讀說明</div>
-          <div class="glp1-expand" id="glp1-expand">
-            此類藥物可能延緩胃排空，增加麻醉期間胃內容物逆流嗆入的風險。請主動告知麻醉醫師您使用的藥物名稱與最後一次施打時間，醫師可能要求更嚴格的禁食規定或調整用藥計畫，請務必遵守。
-          </div>
-        </div>
-        <div class="warn-badge">需告知醫護</div>
-      </div>
-      <div class="item" onclick="toggle(this)">
-        <div class="checkbox"><svg viewBox="0 0 12 9"><polyline points="1,4.5 4.5,8 11,1"/></svg></div>
-        <div class="item-body"><div class="item-text">已攜帶所有藥袋或藥單準備告知醫護</div><div class="item-note">含抗凝血藥、糖尿病藥、保健食品、中草藥等，勿自行停藥或改藥量</div></div>
-      </div>
-      <div class="item" onclick="toggle(this)">
-        <div class="checkbox"><svg viewBox="0 0 12 9"><polyline points="1,4.5 4.5,8 11,1"/></svg></div>
-        <div class="item-body"><div class="item-text">近期無發燒、咳嗽、嘔吐腹瀉、胸悶喘等不適</div><div class="item-note">若有上述症狀，請手術前提早聯絡醫護人員，以確認是否需要調整手術安排</div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- ── Section 5: 緊急提醒 ── -->
-  <div class="edu-section">
-    <div class="edu-section-header">
-      <div class="section-icon" style="background:#FCEBEB">
-        <!-- 警示圖示 -->
-        <svg width="44" height="44" viewBox="0 0 44 44" fill="none">
-          <path d="M22 8 L38 36 H6 Z" fill="#F7C1C1" stroke="#A32D2D" stroke-width="1.5" stroke-linejoin="round"/>
-          <line x1="22" y1="19" x2="22" y2="27" stroke="#A32D2D" stroke-width="2" stroke-linecap="round"/>
-          <circle cx="22" cy="31" r="1.5" fill="#A32D2D"/>
-        </svg>
-      </div>
-      <div>
-        <div class="section-title">緊急狀況提醒</div>
-        <div class="section-subtitle">不確定時，請立刻告知醫護人員</div>
-      </div>
-    </div>
-    <div class="edu-desc red">
-      如果發生以下任何一種狀況，請立刻、誠實地告知麻醉醫師或護理師，不要因為害怕麻煩或尷尬而隱瞞。提早說出來，醫護人員才能幫您找到最安全的解決方式。
-    </div>
-    <div class="alert-box alert-red" style="margin:0 14px 14px">
-      <strong>請立刻告知的情況：</strong>
-      不小心忘記禁食或吃了東西・忘記停藥或不小心多吃了藥・手術前突然身體不舒服（發燒、嘔吐、喘）・對某種藥物或食物有過敏反應・有任何未告知的特殊用藥或病史
-    </div>
-    <div class="checklist-wrap">
-      <div class="item" onclick="toggle(this)">
-        <div class="checkbox"><svg viewBox="0 0 12 9"><polyline points="1,4.5 4.5,8 11,1"/></svg></div>
-        <div class="item-body"><div class="item-text">以上緊急狀況均無發生，或已主動告知醫護人員</div></div>
-      </div>
-      <div class="item" onclick="toggle(this)">
-        <div class="checkbox"><svg viewBox="0 0 12 9"><polyline points="1,4.5 4.5,8 11,1"/></svg></div>
-        <div class="item-body"><div class="item-text">我知道有任何問題可以隨時詢問醫護人員</div></div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Finish -->
-  <div class="finish-area">
-    <button class="finish-btn" onclick="finish()">
-      <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-      確認全部完成
-    </button>
-    <div class="finish-msg" id="finish-msg">
-      <div class="finish-msg-title">術前準備確認完成！</div>
-      <div class="finish-msg-sub">
-        感謝您認真閱讀並完成確認。<br>
-        若有任何疑問，請洽麻醉科或護理人員，我們會協助您。
-      </div>
-    </div>
-  </div>
-
+<!-- 快速導覽 -->
+<div class="nav-steps">
+  <a class="nav-step step-assess" href="#assess">
+    <div class="dot">🩺</div><span>術前<br>評估</span>
+  </a>
+  <a class="nav-step step-drug" href="#drug">
+    <div class="dot">💊</div><span>術前<br>停藥</span>
+  </a>
+  <a class="nav-step step-fast" href="#fast">
+    <div class="dot">🍽</div><span>禁食<br>原則</span>
+  </a>
+  <a class="nav-step step-alert" href="#special">
+    <div class="dot">⚠️</div><span>特殊<br>狀況</span>
+  </a>
+  <a class="nav-step step-other" href="#other">
+    <div class="dot">📌</div><span>其他<br>注意</span>
+  </a>
 </div>
 
-<footer class="site-footer">
-  衛生福利部彰化醫院 麻醉科｜本衛教資料僅供參考，實際醫療指示請依醫護人員說明為準<br>
-  如有任何疑問，請於門診或住院時洽詢麻醉科醫護人員
+<main>
+
+  <!-- ── 一、術前評估與檢查 ── -->
+  <div class="card" id="assess">
+    <div class="card-header hd-green">
+      <span class="ico">🩺</span>
+      <span>一、術前評估與檢查</span>
+    </div>
+    <div class="card-body">
+
+      <div class="bring-grid">
+        <div class="bring-item">
+          <div class="b-ico">🪪</div>
+          <div class="b-title">健保卡</div>
+          <div class="b-sub">必備</div>
+        </div>
+        <div class="bring-item">
+          <div class="b-ico">💊</div>
+          <div class="b-title">用藥清單</div>
+          <div class="b-sub">藥袋或藥單</div>
+        </div>
+        <div class="bring-item">
+          <div class="b-ico">📋</div>
+          <div class="b-title">過敏史紀錄</div>
+          <div class="b-sub">藥物、食物、顯影劑</div>
+        </div>
+        <div class="bring-item">
+          <div class="b-ico">📁</div>
+          <div class="b-title">過去病歷</div>
+          <div class="b-sub">手術或麻醉紀錄</div>
+        </div>
+      </div>
+
+      <ul class="check-list">
+        <li>
+          <div class="c-ico">🩸</div>
+          <div class="c-text">
+            <strong>血液檢查</strong>
+            <small>血常規、凝血功能、血型</small>
+          </div>
+        </li>
+        <li>
+          <div class="c-ico">🔬</div>
+          <div class="c-text">
+            <strong>生化檢查</strong>
+            <small>腎功能、肝功能、血糖、電解質</small>
+          </div>
+        </li>
+        <li>
+          <div class="c-ico">🫀</div>
+          <div class="c-text">
+            <strong>心電圖（ECG）</strong>
+            <small>評估心臟狀況</small>
+          </div>
+        </li>
+        <li>
+          <div class="c-ico">🫁</div>
+          <div class="c-text">
+            <strong>胸部 X 光</strong>
+            <small>評估肺部及心臟</small>
+          </div>
+        </li>
+        <li>
+          <div class="c-ico">📊</div>
+          <div class="c-text">
+            <strong>其他（依病情）</strong>
+            <small>超音波、肺功能等</small>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+
+  <!-- ── 二、術前停藥 ── -->
+  <div class="card" id="drug">
+    <div class="card-header hd-purple">
+      <span class="ico">💊</span>
+      <span>二、術前停藥</span>
+    </div>
+    <div class="card-body">
+
+      <!-- 繼續服用 -->
+      <div class="drug-group">
+        <div class="drug-badge badge-ok">✅ 手術當天照常服用</div>
+        <table class="drug-table">
+          <tr><th>藥物用途</th><th>常見藥名</th></tr>
+          <tr>
+            <td><div class="purpose">高血壓藥</div></td>
+            <td><div class="names">脈優（Metoprolol）、脈得康（Amlodipine）<br>可樂定（Clonidine）、多沙唑嗪（Doxazosin）</div></td>
+          </tr>
+          <tr>
+            <td><div class="purpose">甲狀腺藥</div></td>
+            <td><div class="names">甲狀腺素（Eltroxin）</div></td>
+          </tr>
+          <tr>
+            <td><div class="purpose">癲癇藥</div></td>
+            <td><div class="names">苯巴比妥、帝拔癲（Depakine）</div></td>
+          </tr>
+        </table>
+        <div class="drug-note">💡 以少量開水配服即可，不影響手術進行。</div>
+      </div>
+
+      <!-- 需停用 -->
+      <div class="drug-group" style="margin-top:16px;">
+        <div class="drug-badge badge-stop">❌ 手術前需停用</div>
+        <table class="drug-table">
+          <tr><th>藥物用途</th><th>常見藥名</th><th>停用時間</th></tr>
+          <tr>
+            <td><div class="purpose">某些高血壓藥</div><div class="names">（ACEI / ARB 類）</div></td>
+            <td><div class="names">恩那普利（Enalapril）<br>洛沙坦（Losartan）</div></td>
+            <td><div class="days">術前<br>1 天</div></td>
+          </tr>
+          <tr>
+            <td><div class="purpose">利尿劑（水藥）</div></td>
+            <td><div class="names">服服效（Furosemide）</div></td>
+            <td><div class="days">術前<br>1 天</div></td>
+          </tr>
+          <tr>
+            <td><div class="purpose">血液稀釋藥</div></td>
+            <td><div class="names">阿斯匹靈（Aspirin）<br>保栓通（Plavix）</div></td>
+            <td><div class="days">術前<br>5–7 天</div></td>
+          </tr>
+          <tr>
+            <td><div class="purpose">口服血糖藥</div></td>
+            <td><div class="names">二甲雙胍（Metformin）<br>健糖立（Januvia）</div></td>
+            <td><div class="days">術前<br>1 天</div></td>
+          </tr>
+          <tr>
+            <td><div class="purpose">消炎止痛藥</div></td>
+            <td><div class="names">布洛芬（Ibuprofen）<br>那普洛先（Naproxen）</div></td>
+            <td><div class="days">術前<br>3 天</div></td>
+          </tr>
+          <tr>
+            <td><div class="purpose">保健品</div></td>
+            <td><div class="names">魚油、銀杏、維他命 E</div></td>
+            <td><div class="days">術前<br>7 天</div></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- 主動詢問 -->
+      <div class="drug-group" style="margin-top:16px;">
+        <div class="drug-badge badge-ask">⚠️ 請主動詢問您的醫師</div>
+        <table class="drug-table">
+          <tr><th>藥物用途</th><th>說明</th></tr>
+          <tr>
+            <td><div class="purpose">胰島素注射</div></td>
+            <td><div class="names">依個人狀況由醫師調整劑量</div></td>
+          </tr>
+          <tr>
+            <td><div class="purpose">中草藥／補品</div></td>
+            <td><div class="names">任何種類請提前告知</div></td>
+          </tr>
+          <tr>
+            <td><div class="purpose">自行購買成藥</div></td>
+            <td><div class="names">感冒藥、維他命、減重藥等</div></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="alert-box">
+        📌 <strong>不確定自己的藥需不需要停？</strong><br>
+        請攜帶藥袋或藥單至術前評估門診，由醫師確認停藥時程，切勿自行判斷。
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── 三、禁食原則 ── -->
+  <div class="card" id="fast">
+    <div class="card-header hd-orange">
+      <span class="ico">🍽</span>
+      <span>三、禁食原則</span>
+    </div>
+    <div class="card-body">
+      <div class="fast-timeline">
+        <div class="fast-item">
+          <div class="f-header">
+            <div class="f-title">🍚 固體食物</div>
+            <div class="f-hours">術前 8 小時</div>
+          </div>
+          <div class="f-examples">飯、麵、肉、蛋、豆類、糕點</div>
+        </div>
+        <div class="fast-item">
+          <div class="f-header">
+            <div class="f-title">🥛 非清澈液體</div>
+            <div class="f-hours">術前 6 小時</div>
+          </div>
+          <div class="f-examples">牛奶、豆漿、果汁、濃湯</div>
+        </div>
+        <div class="fast-item">
+          <div class="f-header">
+            <div class="f-title">💧 清澈液體</div>
+            <div class="f-hours">術前 2 小時</div>
+          </div>
+          <div class="f-examples">白開水、無糖茶、黑咖啡（不加奶）</div>
+        </div>
+      </div>
+      <div class="alert-box" style="margin-top:16px;">
+        ⏰ 禁食時間以<strong>手術室通知的開刀時間</strong>為基準，時間若有調整請重新計算。
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 四、特殊狀況確認 ── -->
+  <div class="card" id="special">
+    <div class="card-header hd-red">
+      <span class="ico">⚠️</span>
+      <span>四、特殊狀況請提前告知</span>
+    </div>
+    <div class="card-body">
+      <div class="alert-grid">
+        <div class="alert-item">
+          <div class="a-ico">🤧</div>
+          <div class="a-title">發燒 / 感冒</div>
+          <div class="a-sub">喉嚨痛、咳嗽<br>請提前通知</div>
+        </div>
+        <div class="alert-item">
+          <div class="a-ico">🩸</div>
+          <div class="a-title">月經來潮</div>
+          <div class="a-sub">手術前後<br>請告知護理師</div>
+        </div>
+        <div class="alert-item">
+          <div class="a-ico">🤰</div>
+          <div class="a-title">懷孕 / 備孕</div>
+          <div class="a-sub">可能影響<br>手術排程</div>
+        </div>
+        <div class="alert-item">
+          <div class="a-ico">🦷</div>
+          <div class="a-title">假牙 / 牙套</div>
+          <div class="a-sub">鬆動牙齒<br>插管前需移除</div>
+        </div>
+        <div class="alert-item">
+          <div class="a-ico">😰</div>
+          <div class="a-title">極度緊張</div>
+          <div class="a-sub">緊張屬正常<br>可告知醫護</div>
+        </div>
+        <div class="alert-item">
+          <div class="a-ico">💤</div>
+          <div class="a-title">睡眠呼吸中止</div>
+          <div class="a-sub">請提前告知<br>麻醉科醫師</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 五、其他注意事項 ── -->
+  <div class="card" id="other">
+    <div class="card-header hd-blue">
+      <span class="ico">📌</span>
+      <span>五、其他注意事項</span>
+    </div>
+    <div class="card-body">
+      <ul class="other-list">
+        <li>
+          <div class="o-ico">🚬</div>
+          <div class="o-text">
+            <strong>術前 24 小時禁煙禁酒</strong>
+            <span>降低呼吸道併發症風險</span>
+          </div>
+        </li>
+        <li>
+          <div class="o-ico">👨‍👩‍👧</div>
+          <div class="o-text">
+            <strong>需有成人家屬陪同</strong>
+            <span>協助簽署麻醉同意書，並安排術後接送</span>
+          </div>
+        </li>
+        <li>
+          <div class="o-ico">📝</div>
+          <div class="o-text">
+            <strong>簽署麻醉同意書</strong>
+            <span>術前評估時由麻醉科醫師說明並完成簽署</span>
+          </div>
+        </li>
+      </ul>
+      <div class="alert-box" style="margin-top:12px;">
+        📅 手術當天的穿著、飾品、美容品、術後注意事項<br>請參閱 <strong>「手術當日須知」</strong>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  彰化醫院 麻醉科<br>
+  如有疑問，請洽護理站或術前評估門診<br>
+  本頁資訊僅供衛教參考，實際醫囑以主治醫師指示為準
 </footer>
 
-<script>
-const TOTAL = 13;
-function countChecked(){return document.querySelectorAll('.item.checked').length}
-function updateProgress(){
-  const n=countChecked();
-  const pct=Math.round(n/TOTAL*100);
-  document.getElementById('prog-num').textContent=n;
-  const fill=document.getElementById('prog-fill');
-  fill.style.width=pct+'%';
-  fill.classList.toggle('done',n===TOTAL);
-}
-function toggle(el){
-  if(el.id==='glp1-item')return;
-  el.classList.toggle('checked');
-  updateProgress();
-}
-function toggleGlp1(){
-  const item=document.getElementById('glp1-item');
-  const expand=document.getElementById('glp1-expand');
-  item.classList.toggle('checked');
-  expand.classList.toggle('show',item.classList.contains('checked'));
-  updateProgress();
-}
-function finish(){
-  const msg=document.getElementById('finish-msg');
-  msg.classList.add('show');
-  msg.scrollIntoView({behavior:'smooth',block:'center'});
-}
-updateProgress();
-</script>
 </body>
 </html>
