@@ -109,10 +109,10 @@
     }
     .bring-item .b-ico { font-size: 26px; margin-bottom: 4px; }
     .bring-item .b-title { font-size: 13px; font-weight: 700; color: #2e7d32; }
-    .bring-item .b-sub { font-size: 11px; color: #666; margin-top: 2px; }
+    .bring-item .b-sub { font-size: 11px; color: #666; margin-top: 2px; line-height: 1.4; }
 
     /* ── 檢查項目 ── */
-    .check-list { list-style: none; }
+    .check-list { list-style: none; margin-bottom: 4px; }
     .check-list li {
       display: flex;
       align-items: center;
@@ -149,6 +149,24 @@
     .badge-stop { background: #ffebee; color: #c62828; }
     .badge-ask  { background: #fff8e1; color: #f57f17; }
 
+    /* 藥物子分類標題 */
+    .sub-group {
+      margin-bottom: 14px;
+    }
+    .sub-group:last-child { margin-bottom: 0; }
+    .sub-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #555;
+      background: #f5f5f5;
+      padding: 5px 10px;
+      border-radius: 6px;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
     .drug-table { width: 100%; border-collapse: collapse; }
     .drug-table th {
       font-size: 11px;
@@ -159,15 +177,17 @@
       font-weight: 600;
     }
     .drug-table td {
-      padding: 9px 8px;
+      padding: 8px 8px;
       border-bottom: 1px solid #f8f8f8;
-      font-size: 13px;
-      vertical-align: middle;
+      font-size: 12px;
+      vertical-align: top;
     }
     .drug-table tr:last-child td { border-bottom: none; }
-    .drug-table .purpose { font-weight: 600; color: #333; }
-    .drug-table .names { color: #555; font-size: 12px; margin-top: 2px; }
-    .drug-table .days { font-size: 11px; color: #e53935; font-weight: 600; white-space: nowrap; }
+    .drug-table .purpose { font-weight: 600; color: #333; font-size: 13px; }
+    .drug-table .names { color: #777; font-size: 11px; margin-top: 2px; }
+    .drug-table .days { font-size: 11px; color: #e53935; font-weight: 700; white-space: nowrap; }
+    .drug-table .resume { font-size: 11px; color: #1565c0; font-weight: 600; white-space: nowrap; }
+    .drug-table .note-cell { color: #555; font-size: 11px; line-height: 1.4; }
 
     .drug-note {
       background: #fff8e1;
@@ -175,11 +195,24 @@
       padding: 10px 12px;
       font-size: 12px;
       color: #6d4c41;
-      margin-top: 12px;
+      margin-top: 10px;
       display: flex;
       gap: 8px;
       align-items: flex-start;
+      line-height: 1.5;
     }
+
+    .principle-box {
+      background: #f3e5f5;
+      border-left: 4px solid #8e24aa;
+      border-radius: 0 10px 10px 0;
+      padding: 12px 14px;
+      font-size: 13px;
+      color: #4a148c;
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+    .principle-box strong { display: block; margin-bottom: 4px; font-size: 14px; }
 
     /* ── 禁食 Timeline ── */
     .fast-timeline { position: relative; padding-left: 20px; }
@@ -271,7 +304,54 @@
       font-size: 13px;
       color: #6d4c41;
       margin-top: 12px;
+      line-height: 1.6;
     }
+
+    /* 瘦瘦針特別提醒 */
+    .slim-note {
+      background: #e8f5e9;
+      border-left: 4px solid #43a047;
+      border-radius: 0 10px 10px 0;
+      padding: 10px 14px;
+      font-size: 12px;
+      color: #2e7d32;
+      margin-top: 12px;
+      line-height: 1.6;
+    }
+    .slim-note strong { font-size: 13px; display: block; margin-bottom: 3px; }
+
+    /* ── 病人重點提醒 ── */
+    .summary-card {
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 16px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      border: 2px solid #1e88e5;
+    }
+    .summary-header {
+      background: linear-gradient(90deg,#0d47a1,#1e88e5);
+      color: white;
+      padding: 12px 18px;
+      font-size: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .summary-body { padding: 14px 16px; }
+    .summary-list { list-style: none; }
+    .summary-list li {
+      padding: 7px 0;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 13px;
+      color: #333;
+      display: flex;
+      gap: 8px;
+      line-height: 1.5;
+    }
+    .summary-list li:last-child { border-bottom: none; }
+    .summary-list .chk { color: #1e88e5; font-weight: 700; flex-shrink: 0; }
 
     /* ── 頁尾 ── */
     footer {
@@ -297,7 +377,7 @@
     <div class="dot">🩺</div><span>術前<br>評估</span>
   </a>
   <a class="nav-step step-drug" href="#drug">
-    <div class="dot">💊</div><span>術前<br>停藥</span>
+    <div class="dot">💊</div><span>用藥<br>管理</span>
   </a>
   <a class="nav-step step-fast" href="#fast">
     <div class="dot">🍽</div><span>禁食<br>原則</span>
@@ -312,37 +392,40 @@
 
 <main>
 
-  <!-- ── 一、術前評估與檢查 ── -->
+  <!-- ── 一、術前評估請攜帶資料 ── -->
   <div class="card" id="assess">
     <div class="card-header hd-green">
       <span class="ico">🩺</span>
-      <span>一、術前評估與檢查</span>
+      <span>術前評估請攜帶資料</span>
     </div>
     <div class="card-body">
+
+      <p style="font-size:13px;color:#555;margin-bottom:14px;">請於術前評估或住院時攜帶以下資料：</p>
 
       <div class="bring-grid">
         <div class="bring-item">
           <div class="b-ico">🪪</div>
           <div class="b-title">健保卡</div>
-          <div class="b-sub">必備</div>
+          <div class="b-sub">辦理評估與<br>核對身分使用</div>
         </div>
         <div class="bring-item">
           <div class="b-ico">💊</div>
-          <div class="b-title">用藥清單</div>
-          <div class="b-sub">藥袋或藥單</div>
+          <div class="b-title">用藥清單或藥袋</div>
+          <div class="b-sub">含慢性病藥、止痛藥、保健品、中草藥與減重藥</div>
         </div>
         <div class="bring-item">
           <div class="b-ico">📋</div>
           <div class="b-title">過敏史紀錄</div>
-          <div class="b-sub">藥物、食物、顯影劑</div>
+          <div class="b-sub">藥物、食物、顯影劑或其他過敏反應</div>
         </div>
         <div class="bring-item">
           <div class="b-ico">📁</div>
           <div class="b-title">過去病歷</div>
-          <div class="b-sub">手術或麻醉紀錄</div>
+          <div class="b-sub">曾經手術、麻醉紀錄或特殊疾病資料</div>
         </div>
       </div>
 
+      <p style="font-size:13px;font-weight:700;color:#2e7d32;margin-bottom:8px;">🔬 術前檢查項目</p>
       <ul class="check-list">
         <li>
           <div class="c-ico">🩸</div>
@@ -384,96 +467,202 @@
     </div>
   </div>
 
-  <!-- ── 二、術前停藥 ── -->
+  <!-- ── 二、術前用藥管理 ── -->
   <div class="card" id="drug">
     <div class="card-header hd-purple">
       <span class="ico">💊</span>
-      <span>二、術前停藥</span>
+      <span>術前用藥管理</span>
     </div>
     <div class="card-body">
 
-      <!-- 繼續服用 -->
+      <div class="principle-box">
+        <strong>⚠️ 重要原則</strong>
+        請勿自行停藥、改藥或恢復用藥。<br>
+        手術前請攜帶所有藥袋或藥單，由醫師確認是否需要停藥及停藥時間。
+      </div>
+
+      <!-- 1. 可照常服用 -->
       <div class="drug-group">
-        <div class="drug-badge badge-ok">✅ 手術當天照常服用</div>
+        <div class="drug-badge badge-ok">✅ 手術當天通常可照常服用</div>
+        <p style="font-size:12px;color:#666;margin-bottom:8px;">以下藥物多數情況可依醫師指示，於手術當天以少量白開水服用：</p>
         <table class="drug-table">
-          <tr><th>藥物用途</th><th>常見藥名</th></tr>
+          <tr><th>藥物類別</th><th>常見藥物</th><th>說明</th></tr>
           <tr>
-            <td><div class="purpose">高血壓藥</div></td>
-            <td><div class="names">脈優（Metoprolol）、脈得康（Amlodipine）<br>可樂定（Clonidine）、多沙唑嗪（Doxazosin）</div></td>
+            <td><div class="purpose">部分高血壓藥</div></td>
+            <td><div class="names">Metoprolol、Amlodipine<br>Clonidine、Doxazosin</div></td>
+            <td><div class="note-cell">多數可持續服用，仍需依醫師指示</div></td>
           </tr>
           <tr>
             <td><div class="purpose">甲狀腺藥</div></td>
-            <td><div class="names">甲狀腺素（Eltroxin）</div></td>
+            <td><div class="names">Eltroxin（甲狀腺素）</div></td>
+            <td><div class="note-cell">通常可照常服用</div></td>
           </tr>
           <tr>
             <td><div class="purpose">癲癇藥</div></td>
-            <td><div class="names">苯巴比妥、帝拔癲（Depakine）</div></td>
-          </tr>
-        </table>
-        <div class="drug-note">💡 以少量開水配服即可，不影響手術進行。</div>
-      </div>
-
-      <!-- 需停用 -->
-      <div class="drug-group" style="margin-top:16px;">
-        <div class="drug-badge badge-stop">❌ 手術前需停用</div>
-        <table class="drug-table">
-          <tr><th>藥物用途</th><th>常見藥名</th><th>停用時間</th></tr>
-          <tr>
-            <td><div class="purpose">某些高血壓藥</div><div class="names">（ACEI / ARB 類）</div></td>
-            <td><div class="names">恩那普利（Enalapril）<br>洛沙坦（Losartan）</div></td>
-            <td><div class="days">術前<br>1 天</div></td>
+            <td><div class="names">Depakine<br>Phenobarbital</div></td>
+            <td><div class="note-cell">不建議自行停藥，以免誘發癲癇</div></td>
           </tr>
           <tr>
-            <td><div class="purpose">利尿劑（水藥）</div></td>
-            <td><div class="names">服服效（Furosemide）</div></td>
-            <td><div class="days">術前<br>1 天</div></td>
-          </tr>
-          <tr>
-            <td><div class="purpose">血液稀釋藥</div></td>
-            <td><div class="names">阿斯匹靈（Aspirin）<br>保栓通（Plavix）</div></td>
-            <td><div class="days">術前<br>5–7 天</div></td>
-          </tr>
-          <tr>
-            <td><div class="purpose">口服血糖藥</div></td>
-            <td><div class="names">二甲雙胍（Metformin）<br>健糖立（Januvia）</div></td>
-            <td><div class="days">術前<br>1 天</div></td>
-          </tr>
-          <tr>
-            <td><div class="purpose">消炎止痛藥</div></td>
-            <td><div class="names">布洛芬（Ibuprofen）<br>那普洛先（Naproxen）</div></td>
-            <td><div class="days">術前<br>3 天</div></td>
-          </tr>
-          <tr>
-            <td><div class="purpose">保健品</div></td>
-            <td><div class="names">魚油、銀杏、維他命 E</div></td>
-            <td><div class="days">術前<br>7 天</div></td>
+            <td><div class="purpose">氣喘或慢性<br>肺病吸入藥</div></td>
+            <td><div class="names">吸入型支氣管擴張劑<br>吸入型類固醇</div></td>
+            <td><div class="note-cell">請照常使用，可攜帶吸入器到醫院</div></td>
           </tr>
         </table>
       </div>
 
-      <!-- 主動詢問 -->
-      <div class="drug-group" style="margin-top:16px;">
-        <div class="drug-badge badge-ask">⚠️ 請主動詢問您的醫師</div>
-        <table class="drug-table">
-          <tr><th>藥物用途</th><th>說明</th></tr>
-          <tr>
-            <td><div class="purpose">胰島素注射</div></td>
-            <td><div class="names">依個人狀況由醫師調整劑量</div></td>
-          </tr>
-          <tr>
-            <td><div class="purpose">中草藥／補品</div></td>
-            <td><div class="names">任何種類請提前告知</div></td>
-          </tr>
-          <tr>
-            <td><div class="purpose">自行購買成藥</div></td>
-            <td><div class="names">感冒藥、維他命、減重藥等</div></td>
-          </tr>
-        </table>
+      <!-- 2. 需停用或調整 -->
+      <div class="drug-group">
+        <div class="drug-badge badge-stop">❌ 手術前需要停用或調整的藥物</div>
+        <p style="font-size:12px;color:#666;margin-bottom:12px;">以下藥物可能增加出血、低血壓、低血糖或麻醉風險，需依醫師指示停用：</p>
+
+        <!-- 抗凝血藥 -->
+        <div class="sub-group">
+          <div class="sub-title">🩸 抗凝血藥</div>
+          <table class="drug-table">
+            <tr><th>藥物</th><th>常見商品名</th><th>停藥時間</th></tr>
+            <tr>
+              <td><div class="purpose">Ticagrelor</div></td>
+              <td><div class="names">Brilinta（百無凝）</div></td>
+              <td><div class="days">術前 5 天</div></td>
+            </tr>
+            <tr>
+              <td><div class="purpose">Edoxaban</div></td>
+              <td><div class="names">Lixiana（里先安）</div></td>
+              <td><div class="days">術前 2–3 天</div></td>
+            </tr>
+            <tr>
+              <td><div class="purpose">Dabigatran<br>110 mg</div></td>
+              <td><div class="names">Pradaxa（普栓達）</div></td>
+              <td><div class="days">術前 2 天</div></td>
+            </tr>
+            <tr>
+              <td><div class="purpose">Dabigatran<br>150 mg</div></td>
+              <td><div class="names">Pradaxa（普栓達）</div></td>
+              <td><div class="days">術前 4 天</div></td>
+            </tr>
+            <tr>
+              <td><div class="purpose">Warfarin</div></td>
+              <td><div class="names">Uwarin（瓦寧）</div></td>
+              <td><div class="days">術前 5 天<br>需確認 INR</div></td>
+            </tr>
+          </table>
+          <div class="drug-note">⚠️ 若有心房顫動、人工瓣膜、血栓病史或心臟支架，請勿自行停用，需由醫師評估。</div>
+        </div>
+
+        <!-- 抗血小板藥 -->
+        <div class="sub-group">
+          <div class="sub-title">🔴 抗血小板藥</div>
+          <table class="drug-table">
+            <tr><th>藥物</th><th>常見商品名</th><th>停藥</th><th>復藥</th></tr>
+            <tr>
+              <td><div class="purpose">Aspirin</div></td>
+              <td><div class="names">Bokey（伯基）</div></td>
+              <td><div class="days">術前<br>5 天</div></td>
+              <td><div class="resume">術後<br>24 小時</div></td>
+            </tr>
+            <tr>
+              <td><div class="purpose">Dipyridamole</div></td>
+              <td><div class="names">Carditonin<br>Sancin</div></td>
+              <td><div class="days">術前<br>2 天</div></td>
+              <td><div class="resume">術後<br>24–48 小時</div></td>
+            </tr>
+            <tr>
+              <td><div class="purpose">Clopidogrel</div></td>
+              <td><div class="names">Plavix（保栓通）<br>Clofree</div></td>
+              <td><div class="days">術前<br>3 天</div></td>
+              <td><div class="resume">術後<br>24–48 小時</div></td>
+            </tr>
+            <tr>
+              <td><div class="purpose">Prasugrel</div></td>
+              <td><div class="names">Efient（抑凝安）</div></td>
+              <td><div class="days">術前<br>5 天</div></td>
+              <td><div class="resume">術後<br>24–72 小時</div></td>
+            </tr>
+            <tr>
+              <td><div class="purpose">Ticlopidine</div></td>
+              <td><div class="names">Menchuan<br>Licodin</div></td>
+              <td><div class="days">術前<br>7 天</div></td>
+              <td><div class="resume">術後<br>24 小時</div></td>
+            </tr>
+            <tr>
+              <td><div class="purpose">Cilostazol</div></td>
+              <td><div class="names">Pletaal（普達）</div></td>
+              <td><div class="days">術前<br>3 天</div></td>
+              <td><div class="resume">術後<br>24 小時</div></td>
+            </tr>
+            <tr>
+              <td><div class="purpose">Ginkgo biloba</div></td>
+              <td><div class="names">金杏錠</div></td>
+              <td><div class="days">術前<br>3 天</div></td>
+              <td><div class="resume">依醫師指示</div></td>
+            </tr>
+          </table>
+          <div class="drug-note">⚠️ 若曾放置心臟支架、曾中風或有高血栓風險，是否停用需由醫師判斷。</div>
+        </div>
+
+        <!-- 糖尿病藥物與瘦瘦針 -->
+        <div class="sub-group">
+          <div class="sub-title">💉 糖尿病藥物與瘦瘦針</div>
+          <table class="drug-table">
+            <tr><th>類別</th><th>常見藥物</th><th>建議</th></tr>
+            <tr>
+              <td><div class="purpose">SGLT-2<br>抑制劑</div></td>
+              <td><div class="names">Forxiga（福適佳）<br>Canaglu（可拿糖）<br>Jardiance Duo（恩美糖）<br>Xigduo XR（適多糖）</div></td>
+              <td><div class="days">術前<br>3 天停用</div></td>
+            </tr>
+            <tr>
+              <td><div class="purpose">Metformin 類</div></td>
+              <td><div class="names">Metformin、Janumet<br>Galvus Met、Glimet<br>Glucovance 等</div></td>
+              <td><div class="days">術前<br>一日停用</div></td>
+            </tr>
+            <tr>
+              <td><div class="purpose">瘦瘦針<br>GLP-1 類</div></td>
+              <td><div class="names">Semaglutide、Liraglutide<br>Dulaglutide、Tirzepatide</div></td>
+              <td><div class="note-cell" style="color:#e65100;font-weight:600;">主動<br>告知醫師</div></td>
+            </tr>
+          </table>
+          <div class="drug-note">💡 GLP-1 類藥物可能影響胃排空，增加麻醉期間胃內容物逆流或吸入風險，請務必告知。</div>
+        </div>
+
+        <!-- 部分高血壓藥與利尿劑 -->
+        <div class="sub-group">
+          <div class="sub-title">🩺 部分高血壓藥與利尿劑</div>
+          <table class="drug-table">
+            <tr><th>類別</th><th>常見藥物</th><th>停藥時間</th></tr>
+            <tr>
+              <td><div class="purpose">ACEI 類</div></td>
+              <td><div class="names">Captopril、Enalapril<br>Imidapril</div></td>
+              <td><div class="days">手術當日停用</div></td>
+            </tr>
+            <tr>
+              <td><div class="purpose">ARB 類</div></td>
+              <td><div class="names">Irbesartan、Candesartan<br>Olmesartan、Telmisartan<br>Valsartan 等</div></td>
+              <td><div class="days">手術當日停用</div></td>
+            </tr>
+            <tr>
+              <td><div class="purpose">ARB 複方</div></td>
+              <td><div class="names">Entresto<br>Amlodipine/Valsartan<br>Amlodipine/Olmesartan 等</div></td>
+              <td><div class="days">手術當日停用</div></td>
+            </tr>
+            <tr>
+              <td><div class="purpose">含利尿劑複方</div></td>
+              <td><div class="names">Co-Diovan、Synzar<br>Sevikar HCT、Exforge HCT 等</div></td>
+              <td><div class="days">手術當日停用</div></td>
+            </tr>
+            <tr>
+              <td><div class="purpose">利尿劑</div></td>
+              <td><div class="names">Spironolactone、Eplerenone<br>Furosemide、Torsemide</div></td>
+              <td><div class="days">手術當日停用</div></td>
+            </tr>
+          </table>
+          <div class="drug-note">💡 這類藥物可能與麻醉期間血壓變化有關，是否停用仍需依個人疾病與醫師指示調整。</div>
+        </div>
+
       </div>
 
       <div class="alert-box">
         📌 <strong>不確定自己的藥需不需要停？</strong><br>
-        請攜帶藥袋或藥單至術前評估門診，由醫師確認停藥時程，切勿自行判斷。
+        請攜帶藥袋或藥單至術前評估，由醫師確認停藥時程，切勿自行判斷。
       </div>
 
     </div>
@@ -483,7 +672,7 @@
   <div class="card" id="fast">
     <div class="card-header hd-orange">
       <span class="ico">🍽</span>
-      <span>三、禁食原則</span>
+      <span>禁食原則</span>
     </div>
     <div class="card-body">
       <div class="fast-timeline">
@@ -506,90 +695,125 @@
             <div class="f-title">💧 清澈液體</div>
             <div class="f-hours">術前 2 小時</div>
           </div>
-          <div class="f-examples">白開水、無糖茶、黑咖啡（不加奶）</div>
+          <div class="f-examples">白開水、無糖茶、黑咖啡（不可加奶）</div>
         </div>
       </div>
+
       <div class="alert-box" style="margin-top:16px;">
-        ⏰ 禁食時間以<strong>手術室通知的開刀時間</strong>為基準，時間若有調整請重新計算。
+        ⏰ 禁食時間以<strong>手術室通知的開刀時間</strong>為基準；若開刀時間改變，請重新計算禁食時間。
+      </div>
+
+      <div class="slim-note">
+        <strong>💉 施打瘦瘦針（GLP-1 類）者請注意</strong>
+        手術前請主動告知麻醉科醫師。術前 8–24 小時建議採低渣飲食，並依醫師指示完成禁食。
+        若有噁心、嘔吐、腹脹、胃食道逆流或明顯腸胃不適，請務必提前告知醫護人員。
       </div>
     </div>
   </div>
 
-  <!-- ── 四、特殊狀況確認 ── -->
+  <!-- ── 四、特殊狀況請提前告知 ── -->
   <div class="card" id="special">
     <div class="card-header hd-red">
       <span class="ico">⚠️</span>
-      <span>四、特殊狀況請提前告知</span>
+      <span>特殊狀況請提前告知</span>
     </div>
     <div class="card-body">
       <div class="alert-grid">
         <div class="alert-item">
           <div class="a-ico">🤧</div>
           <div class="a-title">發燒 / 感冒</div>
-          <div class="a-sub">喉嚨痛、咳嗽<br>請提前通知</div>
-        </div>
-        <div class="alert-item">
-          <div class="a-ico">🩸</div>
-          <div class="a-title">月經來潮</div>
-          <div class="a-sub">手術前後<br>請告知護理師</div>
+          <div class="a-sub">咳嗽、喉嚨痛<br>可能影響麻醉安全</div>
         </div>
         <div class="alert-item">
           <div class="a-ico">🤰</div>
-          <div class="a-title">懷孕 / 備孕</div>
-          <div class="a-sub">可能影響<br>手術排程</div>
+          <div class="a-title">懷孕</div>
+          <div class="a-sub">可能影響麻醉藥物<br>與手術安排</div>
         </div>
         <div class="alert-item">
           <div class="a-ico">🦷</div>
           <div class="a-title">假牙 / 牙套</div>
-          <div class="a-sub">鬆動牙齒<br>插管前需移除</div>
+          <div class="a-sub">鬆動牙齒<br>插管時需特別保護</div>
         </div>
         <div class="alert-item">
           <div class="a-ico">😰</div>
-          <div class="a-title">極度緊張</div>
-          <div class="a-sub">緊張屬正常<br>可告知醫護</div>
+          <div class="a-title">極度緊張焦慮</div>
+          <div class="a-sub">可請醫護人員<br>協助說明與安撫</div>
         </div>
         <div class="alert-item">
           <div class="a-ico">💤</div>
           <div class="a-title">睡眠呼吸中止</div>
-          <div class="a-sub">請提前告知<br>麻醉科醫師</div>
+          <div class="a-sub">麻醉與術後呼吸<br>照護需特別注意</div>
+        </div>
+        <div class="alert-item">
+          <div class="a-ico">💉</div>
+          <div class="a-title">近期施打瘦瘦針</div>
+          <div class="a-sub">可能影響胃排空<br>需評估麻醉安全</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- ── 五、其他注意事項 ── -->
+  <!-- ── 五、手術前其他注意事項 ── -->
   <div class="card" id="other">
     <div class="card-header hd-blue">
       <span class="ico">📌</span>
-      <span>五、其他注意事項</span>
+      <span>手術前其他注意事項</span>
     </div>
     <div class="card-body">
       <ul class="other-list">
         <li>
           <div class="o-ico">🚬</div>
           <div class="o-text">
-            <strong>術前 24 小時禁煙禁酒</strong>
-            <span>降低呼吸道併發症風險</span>
+            <strong>術前 24 小時禁煙、禁酒</strong>
+            <span>降低呼吸道與麻醉相關併發症風險</span>
           </div>
         </li>
         <li>
           <div class="o-ico">👨‍👩‍👧</div>
           <div class="o-text">
             <strong>需有成人家屬陪同</strong>
-            <span>協助簽署麻醉同意書，並安排術後接送</span>
+            <span>協助簽署同意書、了解術後照護與接送安排</span>
           </div>
         </li>
         <li>
           <div class="o-ico">📝</div>
           <div class="o-text">
-            <strong>簽署麻醉同意書</strong>
-            <span>術前評估時由麻醉科醫師說明並完成簽署</span>
+            <strong>完成麻醉同意書</strong>
+            <span>術前由麻醉科醫師說明後簽署</span>
+          </div>
+        </li>
+        <li>
+          <div class="o-ico">👗</div>
+          <div class="o-text">
+            <strong>手術當天穿著與飾品</strong>
+            <span>請依「手術當日須知」移除飾品、美甲、隱形眼鏡等</span>
+          </div>
+        </li>
+        <li>
+          <div class="o-ico">🔔</div>
+          <div class="o-text">
+            <strong>有任何新症狀請告知</strong>
+            <span>如胸痛、喘、心悸、發燒、出血、低血糖等</span>
           </div>
         </li>
       </ul>
-      <div class="alert-box" style="margin-top:12px;">
-        📅 手術當天的穿著、飾品、美容品、術後注意事項<br>請參閱 <strong>「手術當日須知」</strong>
-      </div>
+    </div>
+  </div>
+
+  <!-- ── 手術前重點提醒 ── -->
+  <div class="summary-card">
+    <div class="summary-header">
+      📝 手術前重點提醒
+    </div>
+    <div class="summary-body">
+      <ul class="summary-list">
+        <li><span class="chk">✔</span><span>請攜帶所有藥袋與藥單，交由醫師確認</span></li>
+        <li><span class="chk">✔</span><span>不要自行停藥、改藥或恢復用藥</span></li>
+        <li><span class="chk">✔</span><span>抗凝血劑、糖尿病藥、高血壓藥、保健品與瘦瘦針，最需要由醫師確認</span></li>
+        <li><span class="chk">✔</span><span>施打瘦瘦針者：術前 8–24 小時請採低渣飲食，依醫師指示禁食</span></li>
+        <li><span class="chk">✔</span><span>發燒、感冒、懷孕、牙齒鬆動、睡眠呼吸中止症或腸胃不適，請提前告知</span></li>
+        <li><span class="chk">✔</span><span>不確定藥物是否需要停用，請直接詢問醫護人員</span></li>
+      </ul>
     </div>
   </div>
 
@@ -598,7 +822,8 @@
 <footer>
   彰化醫院 麻醉科<br>
   如有疑問，請洽護理站或術前評估門診<br>
-  本頁資訊僅供衛教參考，實際醫囑以主治醫師指示為準
+  本衛教內容為一般麻醉術前準備說明，實際停藥、復藥及麻醉安排，<br>
+  仍須依病人疾病狀況、手術種類及主治醫師／麻醉科醫師指示為準
 </footer>
 
 </body>
